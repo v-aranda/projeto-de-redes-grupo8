@@ -10,6 +10,7 @@
 | Professor | PENDENTE: preencher nome do professor |
 | Grupo | 8 |
 | Repositorio GitHub | <https://github.com/v-aranda/projeto-de-redes-grupo8> |
+| Drive com .OVA | <https://drive.google.com/drive/folders/1ucorBAdl78kvFctQbuMzVcrS2Cc-R316?usp=sharing> |
 
 ### Integrantes do grupo
 
