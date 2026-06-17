@@ -207,6 +207,7 @@ As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles referentes aos integr
 <img width="685" height="57" alt="image" src="https://github.com/user-attachments/assets/966fba50-feb4-4494-b2c9-a594e3fcf3c5" />
 <img width="694" height="60" alt="image" src="https://github.com/user-attachments/assets/8053cea4-afdf-4c4a-97e8-0ca6cc2a4a33" />
 <img width="680" height="61" alt="image" src="https://github.com/user-attachments/assets/b5efa772-2664-43fc-88a2-6d4d86daf697" />
+<img width="686" height="65" alt="image" src="https://github.com/user-attachments/assets/aa43235a-d67f-4306-958c-c29855db1b16" />
 
 
 
@@ -229,6 +230,9 @@ As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles referentes aos integr
 
 ### Testes de ping por hostname e FQDN
 <img width="799" height="806" alt="image" src="https://github.com/user-attachments/assets/840c1d7e-2b75-431a-9044-be33e5f696ce" />
+<img width="798" height="356" alt="image" src="https://github.com/user-attachments/assets/59af5dfa-bd3d-4a4d-b282-82864f4c80f6" />
+<img width="796" height="199" alt="image" src="https://github.com/user-attachments/assets/ecaee773-594c-41f7-9f44-39dc1410c41b" />
+
 
 | Origem | Destino | Comando | Resultado |
 | --- | --- | --- | --- |
