@@ -200,13 +200,21 @@ Os testes devem validar comunicacao por IP, por FQDN e acesso SSH usando os usua
 As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles referentes aos integrantes do grupo com nível de permissão padrão e 2 com nível de permissão sudo(administrador e super)
 **srv01**
 <img width="706" height="233" alt="image" src="https://github.com/user-attachments/assets/1b5fd2b1-1a49-4fad-866e-e7fccef9e7fc" />
-**srv02 até a srv08**
+####srv02 até a srv08
 <img width="693" height="66" alt="image" src="https://github.com/user-attachments/assets/4222712d-5ee0-4ab8-a359-33e349bf65f6" />
 <img width="673" height="60" alt="image" src="https://github.com/user-attachments/assets/b29c3d61-5c36-48ea-8c57-92ba878dd8b0" />
+<img width="675" height="63" alt="image" src="https://github.com/user-attachments/assets/9e6aedf4-09e0-4cea-bd97-0ce6faf59427" />
+<img width="685" height="57" alt="image" src="https://github.com/user-attachments/assets/966fba50-feb4-4494-b2c9-a594e3fcf3c5" />
+<img width="694" height="60" alt="image" src="https://github.com/user-attachments/assets/8053cea4-afdf-4c4a-97e8-0ca6cc2a4a33" />
+<img width="680" height="61" alt="image" src="https://github.com/user-attachments/assets/b5efa772-2664-43fc-88a2-6d4d86daf697" />
+
+
 
 
 
 ### Testes de ping por IP
+
+
 
 | Origem | Destino | Comando | Resultado |
 | --- | --- | --- | --- |
@@ -220,6 +228,7 @@ As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles referentes aos integr
 | `srv08` | `srv01` | `ping -c 4 192.168.26.113` | PENDENTE: registrar saida real |
 
 ### Testes de ping por hostname e FQDN
+<img width="799" height="806" alt="image" src="https://github.com/user-attachments/assets/840c1d7e-2b75-431a-9044-be33e5f696ce" />
 
 | Origem | Destino | Comando | Resultado |
 | --- | --- | --- | --- |
