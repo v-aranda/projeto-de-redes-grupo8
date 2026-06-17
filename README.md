@@ -220,14 +220,6 @@ Os testes devem validar comunicacao por IP, por FQDN e acesso SSH usando os usua
 
 
 ### Testes de ping por IP
-<img width="519" height="353" alt="image" src="https://github.com/user-attachments/assets/31341e5a-4525-48f2-ba1f-85d10cbc1b11" />
-<img width="538" height="347" alt="image" src="https://github.com/user-attachments/assets/bf41ff11-da54-42ed-b1e9-2e0b19a15087" />
-<img width="520" height="353" alt="image" src="https://github.com/user-attachments/assets/5ca9baa4-16ce-460f-8771-115ad38cdc5d" />
-<img width="520" height="351" alt="image" src="https://github.com/user-attachments/assets/0544b7d5-bf9b-45c3-8135-e61f4dc64d25" />
-
-
-
-
 | Origem | Destino | Comando |
 | --- | --- | --- |
 | `srv02` | `srv01` | `ping -c 4 192.168.26.113` | 
@@ -239,12 +231,14 @@ Os testes devem validar comunicacao por IP, por FQDN e acesso SSH usando os usua
 | `srv05` | `srv04` | `ping -c 4 192.168.26.116` | 
 | `srv05` | `srv08` | `ping -c 4 192.168.26.120` | 
 
+#### Evidências
+<img width="519" height="353" alt="image" src="https://github.com/user-attachments/assets/31341e5a-4525-48f2-ba1f-85d10cbc1b11" />
+<img width="538" height="347" alt="image" src="https://github.com/user-attachments/assets/bf41ff11-da54-42ed-b1e9-2e0b19a15087" />
+<img width="520" height="353" alt="image" src="https://github.com/user-attachments/assets/5ca9baa4-16ce-460f-8771-115ad38cdc5d" />
+<img width="520" height="351" alt="image" src="https://github.com/user-attachments/assets/0544b7d5-bf9b-45c3-8135-e61f4dc64d25" />
+
+
 ### Testes de ping por hostname e FQDN
-<img width="799" height="806" alt="image" src="https://github.com/user-attachments/assets/840c1d7e-2b75-431a-9044-be33e5f696ce" />
-<img width="798" height="356" alt="image" src="https://github.com/user-attachments/assets/59af5dfa-bd3d-4a4d-b282-82864f4c80f6" />
-<img width="796" height="199" alt="image" src="https://github.com/user-attachments/assets/ecaee773-594c-41f7-9f44-39dc1410c41b" />
-
-
 | Origem | Destino | Comando | 
 | --- | --- | --- | 
 | `srv01` | `srv02` | `ping -c 4 srv02` |
@@ -256,11 +250,10 @@ Os testes devem validar comunicacao por IP, por FQDN e acesso SSH usando os usua
 | `srv01` | `srv08` | `ping -c 4 srv08` | 
 | `srv08` | `srv01` | `ping -c 4 srv01` | 
 
-Resultado esperado para testes bem-sucedidos:
-
-```text
-4 packets transmitted, 4 received, 0% packet loss
-```
+#### Evidências
+<img width="799" height="806" alt="image" src="https://github.com/user-attachments/assets/840c1d7e-2b75-431a-9044-be33e5f696ce" />
+<img width="798" height="356" alt="image" src="https://github.com/user-attachments/assets/59af5dfa-bd3d-4a4d-b282-82864f4c80f6" />
+<img width="796" height="199" alt="image" src="https://github.com/user-attachments/assets/ecaee773-594c-41f7-9f44-39dc1410c41b" />
 
 ### Testes de acesso SSH
 
@@ -290,25 +283,4 @@ exit
 
 
 <img width="803" height="808" alt="image" src="https://github.com/user-attachments/assets/c3b64f0e-9d5b-4987-a2cb-e798915b1acd" />
-
-
-
-## Checklist de atendimento aos requisitos
-
-| Requisito | Status |
-| --- | --- |
-| Cabecalho com IFAL, disciplina, professor e grupo | Parcial: professor pendente |
-| Integrantes do grupo listados | Atendido |
-| Link do repositorio GitHub informado | Atendido |
-| Ambiente com 8 VMs Ubuntu Server | Atendido |
-| Hardware de cada VM listado | Atendido |
-| Enderecamento dentro de `192.168.26.0/24` | Atendido |
-| Uso de mascara `/28` | Atendido |
-| Dominio no formato `<grupoX>.bsi-26-1.maceio.lab` | Atendido |
-| Mapeamento IP/nomes no `/etc/hosts` | Documentado para todas as VMs |
-| Hostnames editados no sistema operacional | Documentado para todas as VMs |
-| Usuario `administrador` com senha `adminifal` | Documentado; validar em cada VM |
-| Usuarios individuais dos integrantes | Documentado; validar em cada VM |
-| Testes de ping por IP e FQDN | Tabelas criadas; registrar saidas reais |
-| Testes de SSH com nomes de host e usuarios | Tabelas criadas; registrar saidas reais |
 
