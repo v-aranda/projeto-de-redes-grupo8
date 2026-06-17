@@ -142,6 +142,7 @@ Cada VM deve conter o usuario administrador padrao das aulas e os usuarios indiv
 | Usuario | Senha | Tipo | Observacao |
 | --- | --- | --- | --- |
 | `administrador` | `adminifal` | Administrador com `sudo` | Padrao utilizado nas aulas |
+| `super` | `1234` | `sudo` de criação | usuário definido na criação das VM's |
 
 Comandos de criacao ou ajuste, quando necessario:
 
@@ -168,10 +169,10 @@ root
 
 | Usuario | Integrante | Tipo |
 | --- | --- | --- |
-| `ronalde.omena` | Ronalde Kelvyn Santos de Omena | Usuario individual |
-| `edgar.pereira` | Edgar de Oliveira Pereira | Usuario individual |
+| `ronalde.kelvin` | Ronalde Kelvyn Santos de Omena | Usuario individual |
+| `edgar.oliveira` | Edgar de Oliveira Pereira | Usuario individual |
 | `vinicius.aranda` | Vinicius Aranda Lima da Silva | Usuario individual |
-| `luiz.torres` | Luiz Arthur Lisboa Cirilo Torres | Usuario individual |
+| `luiz.arthur` | Luiz Arthur Lisboa Cirilo Torres | Usuario individual |
 
 Comandos usados para criacao dos usuarios individuais:
 
