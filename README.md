@@ -77,6 +77,7 @@ A turma `bsi-26-1` utiliza a rede `192.168.26.0/24`. Para o Grupo 8, foi utiliza
 | `srv08` | `srv08` | `srv08.grupo8.bsi-26-1.maceio.lab` | `srv08` | `192.168.26.120` | `/28` |
 
 ### Configuracao de hostname
+<img width="300" height="70" alt="image" src="https://github.com/user-attachments/assets/e35f2a67-ca29-4d01-831d-0be90cded215" />
 
 Cada maquina recebeu seu hostname completo com `hostnamectl`. Exemplo:
 
@@ -89,6 +90,8 @@ hostname -f
 O mesmo padrao foi aplicado de `srv01` ate `srv08`, alterando apenas o numero do servidor.
 
 ### Configuracao de rede com Netplan
+<img width="843" height="184" alt="image" src="https://github.com/user-attachments/assets/c0690064-8c3f-41d8-b852-b7aa153096cc" />
+
 
 Exemplo da configuracao da `srv01`:
 
@@ -112,6 +115,9 @@ ip addr show enp0s3
 ```
 
 ### Arquivo `/etc/hosts`
+
+<img width="793" height="346" alt="image" src="https://github.com/user-attachments/assets/a8dd4360-821f-4810-8031-294bf668529b" />
+
 
 O mapeamento abaixo deve estar presente no arquivo `/etc/hosts` de todas as VMs:
 
@@ -184,13 +190,15 @@ sudo adduser luiz.torres
 ```
 
 Comandos de verificacao:
+<img width="770" height="198" alt="image" src="https://github.com/user-attachments/assets/b2b98d47-bf03-46a9-aae3-394432169bc3" />
+
 
 ```bash
 id administrador
-id ronalde.omena
-id edgar.pereira
+id ronalde.kelvin
+id edgar.oliveira
 id vinicius.aranda
-id luiz.torres
+id luiz.arthur
 ```
 
 ## Secao 5: Testes e Evidencias
@@ -198,7 +206,7 @@ id luiz.torres
 Os testes devem validar comunicacao por IP, por FQDN e acesso SSH usando os usuarios criados. As saidas reais dos comandos devem ser registradas nesta secao ou anexadas como prints no repositorio.
 
 ### Testes de usuários
-As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles referentes aos integrantes do grupo com nível de permissão padrão e 2 com nível de permissão sudo(administrador e super)
+As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles integrantes do grupo com nível de permissão padrão e 2 com nível de permissão sudo(administrador e super)
 **srv01**
 <img width="706" height="233" alt="image" src="https://github.com/user-attachments/assets/1b5fd2b1-1a49-4fad-866e-e7fccef9e7fc" />
 ####srv02 até a srv08
@@ -216,18 +224,23 @@ As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles referentes aos integr
 
 ### Testes de ping por IP
 
+<img width="538" height="347" alt="image" src="https://github.com/user-attachments/assets/bf41ff11-da54-42ed-b1e9-2e0b19a15087" />
+<img width="520" height="353" alt="image" src="https://github.com/user-attachments/assets/5ca9baa4-16ce-460f-8771-115ad38cdc5d" />
+<img width="520" height="351" alt="image" src="https://github.com/user-attachments/assets/0544b7d5-bf9b-45c3-8135-e61f4dc64d25" />
+
+
 
 
 | Origem | Destino | Comando | Resultado |
 | --- | --- | --- | --- |
-| `srv01` | `srv02` | `ping -c 4 192.168.26.114` | PENDENTE: registrar saida real |
-| `srv01` | `srv03` | `ping -c 4 192.168.26.115` | PENDENTE: registrar saida real |
-| `srv01` | `srv04` | `ping -c 4 192.168.26.116` | PENDENTE: registrar saida real |
-| `srv01` | `srv05` | `ping -c 4 192.168.26.117` | PENDENTE: registrar saida real |
-| `srv01` | `srv06` | `ping -c 4 192.168.26.118` | PENDENTE: registrar saida real |
-| `srv01` | `srv07` | `ping -c 4 192.168.26.119` | PENDENTE: registrar saida real |
-| `srv01` | `srv08` | `ping -c 4 192.168.26.120` | PENDENTE: registrar saida real |
-| `srv08` | `srv01` | `ping -c 4 192.168.26.113` | PENDENTE: registrar saida real |
+| `srv02` | `srv01` | `ping -c 4 192.168.26.113` | 
+| `srv02` | `srv08` | `ping -c 4 192.168.26.120` | 
+| `srv03` | `srv02` | `ping -c 4 192.168.26.114` | 
+| `srv03` | `srv07` | `ping -c 4 192.168.26.119` | 
+| `srv04` | `srv03` | `ping -c 4 192.168.26.115` | 
+| `srv04` | `srv06` | `ping -c 4 192.168.26.118` | 
+| `srv05` | `srv04` | `ping -c 4 192.168.26.116` | 
+| `srv05` | `srv08` | `ping -c 4 192.168.26.120` | 
 
 ### Testes de ping por hostname e FQDN
 <img width="799" height="806" alt="image" src="https://github.com/user-attachments/assets/840c1d7e-2b75-431a-9044-be33e5f696ce" />
@@ -237,14 +250,14 @@ As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles referentes aos integr
 
 | Origem | Destino | Comando | Resultado |
 | --- | --- | --- | --- |
-| `srv01` | `srv02` | `ping -c 4 srv02` | PENDENTE: registrar saida real |
-| `srv01` | `srv03` | `ping -c 4 srv03` | PENDENTE: registrar saida real |
-| `srv01` | `srv04` | `ping -c 4 srv04` | PENDENTE: registrar saida real |
-| `srv01` | `srv05` | `ping -c 4 srv05` | PENDENTE: registrar saida real |
-| `srv01` | `srv06` | `ping -c 4 srv06` | PENDENTE: registrar saida real |
-| `srv01` | `srv07` | `ping -c 4 srv07` | PENDENTE: registrar saida real |
-| `srv01` | `srv08` | `ping -c 4 srv08` | PENDENTE: registrar saida real |
-| `srv08` | `srv01` | `ping -c 4 srv01.grupo8.bsi-26-1.maceio.lab` | PENDENTE: registrar saida real |
+| `srv01` | `srv02` | `ping -c 4 srv02` |
+| `srv01` | `srv03` | `ping -c 4 srv03` | 
+| `srv01` | `srv04` | `ping -c 4 srv04` | 
+| `srv01` | `srv05` | `ping -c 4 srv05` | 
+| `srv01` | `srv06` | `ping -c 4 srv06` |
+| `srv01` | `srv07` | `ping -c 4 srv07` | 
+| `srv01` | `srv08` | `ping -c 4 srv08` | 
+| `srv08` | `srv01` | `ping -c 4 srv01` | 
 
 Resultado esperado para testes bem-sucedidos:
 
@@ -256,12 +269,12 @@ Resultado esperado para testes bem-sucedidos:
 
 | Origem | Destino | Usuario | Comando | Resultado |
 | --- | --- | --- | --- | --- |
-| `srv01` | `srv02` | `administrador` | `ssh administrador@srv02` | PENDENTE: registrar saida real |
-| `srv01` | `srv08` | `administrador` | `ssh administrador@srv08` | PENDENTE: registrar saida real |
-| `srv01` | `srv02` | `vinicius.aranda` | `ssh vinicius.aranda@srv02` | PENDENTE: registrar saida real |
-| `srv08` | `srv01` | `ronalde.omena` | `ssh ronalde.omena@srv01` | PENDENTE: registrar saida real |
-| `srv03` | `srv04` | `edgar.pereira` | `ssh edgar.pereira@srv04` | PENDENTE: registrar saida real |
-| `srv05` | `srv06` | `luiz.torres` | `ssh luiz.torres@srv06` | PENDENTE: registrar saida real |
+| `srv01` | `srv02` | `administrador` | `ssh administrador@srv02` | 
+| `srv01` | `srv08` | `administrador` | `ssh administrador@srv08` | 
+| `srv01` | `srv02` | `vinicius.aranda` | `ssh vinicius.aranda@srv02` | 
+| `srv08` | `srv01` | `ronalde.omena` | `ssh ronalde.omena@srv01` |
+| `srv03` | `srv04` | `edgar.pereira` | `ssh edgar.pereira@srv04` | 
+| `srv05` | `srv06` | `luiz.torres` | `ssh luiz.torres@srv06` | 
 
 Comandos para comprovar o acesso apos conectar via SSH:
 
