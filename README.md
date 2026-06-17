@@ -206,10 +206,7 @@ id luiz.arthur
 Os testes devem validar comunicacao por IP, por FQDN e acesso SSH usando os usuarios criados. As saidas reais dos comandos devem ser registradas nesta secao ou anexadas como prints no repositorio.
 
 ### Testes de usuários
-As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles integrantes do grupo com nível de permissão padrão e 2 com nível de permissão sudo(administrador e super)
-**srv01**
 <img width="706" height="233" alt="image" src="https://github.com/user-attachments/assets/1b5fd2b1-1a49-4fad-866e-e7fccef9e7fc" />
-####srv02 até a srv08
 <img width="693" height="66" alt="image" src="https://github.com/user-attachments/assets/4222712d-5ee0-4ab8-a359-33e349bf65f6" />
 <img width="673" height="60" alt="image" src="https://github.com/user-attachments/assets/b29c3d61-5c36-48ea-8c57-92ba878dd8b0" />
 <img width="675" height="63" alt="image" src="https://github.com/user-attachments/assets/9e6aedf4-09e0-4cea-bd97-0ce6faf59427" />
@@ -223,7 +220,7 @@ As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles integrantes do grupo 
 
 
 ### Testes de ping por IP
-
+<img width="519" height="353" alt="image" src="https://github.com/user-attachments/assets/31341e5a-4525-48f2-ba1f-85d10cbc1b11" />
 <img width="538" height="347" alt="image" src="https://github.com/user-attachments/assets/bf41ff11-da54-42ed-b1e9-2e0b19a15087" />
 <img width="520" height="353" alt="image" src="https://github.com/user-attachments/assets/5ca9baa4-16ce-460f-8771-115ad38cdc5d" />
 <img width="520" height="351" alt="image" src="https://github.com/user-attachments/assets/0544b7d5-bf9b-45c3-8135-e61f4dc64d25" />
@@ -231,8 +228,8 @@ As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles integrantes do grupo 
 
 
 
-| Origem | Destino | Comando | Resultado |
-| --- | --- | --- | --- |
+| Origem | Destino | Comando |
+| --- | --- | --- |
 | `srv02` | `srv01` | `ping -c 4 192.168.26.113` | 
 | `srv02` | `srv08` | `ping -c 4 192.168.26.120` | 
 | `srv03` | `srv02` | `ping -c 4 192.168.26.114` | 
@@ -248,8 +245,8 @@ As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles integrantes do grupo 
 <img width="796" height="199" alt="image" src="https://github.com/user-attachments/assets/ecaee773-594c-41f7-9f44-39dc1410c41b" />
 
 
-| Origem | Destino | Comando | Resultado |
-| --- | --- | --- | --- |
+| Origem | Destino | Comando | 
+| --- | --- | --- | 
 | `srv01` | `srv02` | `ping -c 4 srv02` |
 | `srv01` | `srv03` | `ping -c 4 srv03` | 
 | `srv01` | `srv04` | `ping -c 4 srv04` | 
@@ -267,13 +264,13 @@ Resultado esperado para testes bem-sucedidos:
 
 ### Testes de acesso SSH
 
-| Origem | Destino | Usuario | Comando | Resultado |
-| --- | --- | --- | --- | --- |
+| Origem | Destino | Usuario | Comando | 
+| --- | --- | --- | --- | 
 | `srv01` | `srv02` | `administrador` | `ssh administrador@srv02` | 
 | `srv01` | `srv08` | `administrador` | `ssh administrador@srv08` | 
 | `srv01` | `srv02` | `vinicius.aranda` | `ssh vinicius.aranda@srv02` | 
 | `srv08` | `srv01` | `ronalde.omena` | `ssh ronalde.omena@srv01` |
-| `srv03` | `srv04` | `edgar.pereira` | `ssh edgar.pereira@srv04` | 
+| `srv03` | `srv07` | `edgar.pereira` | `ssh edgar.pereira@srv04` | 
 | `srv05` | `srv06` | `luiz.torres` | `ssh luiz.torres@srv06` | 
 
 Comandos para comprovar o acesso apos conectar via SSH:
