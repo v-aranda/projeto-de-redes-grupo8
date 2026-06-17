@@ -196,6 +196,16 @@ id luiz.torres
 
 Os testes devem validar comunicacao por IP, por FQDN e acesso SSH usando os usuarios criados. As saidas reais dos comandos devem ser registradas nesta secao ou anexadas como prints no repositorio.
 
+### Testes de usuários
+As 8 maquinas possuem os mesmos 6 usuários, sendo 4 deles referentes aos integrantes do grupo com nível de permissão padrão e 2 com nível de permissão sudo(administrador e super)
+**srv01**
+<img width="706" height="233" alt="image" src="https://github.com/user-attachments/assets/1b5fd2b1-1a49-4fad-866e-e7fccef9e7fc" />
+**srv02 até a srv08**
+<img width="693" height="66" alt="image" src="https://github.com/user-attachments/assets/4222712d-5ee0-4ab8-a359-33e349bf65f6" />
+<img width="673" height="60" alt="image" src="https://github.com/user-attachments/assets/b29c3d61-5c36-48ea-8c57-92ba878dd8b0" />
+
+
+
 ### Testes de ping por IP
 
 | Origem | Destino | Comando | Resultado |
