@@ -189,7 +189,7 @@ sudo adduser vinicius.aranda
 sudo adduser luiz.torres
 ```
 
-Comandos de verificacao:
+#### Comandos de verificacao:
 <img width="770" height="198" alt="image" src="https://github.com/user-attachments/assets/b2b98d47-bf03-46a9-aae3-394432169bc3" />
 
 
@@ -267,26 +267,31 @@ Resultado esperado para testes bem-sucedidos:
 | Origem | Destino | Usuario | Comando | 
 | --- | --- | --- | --- | 
 | `srv01` | `srv02` | `administrador` | `ssh administrador@srv02` | 
-| `srv01` | `srv08` | `administrador` | `ssh administrador@srv08` | 
-| `srv01` | `srv02` | `vinicius.aranda` | `ssh vinicius.aranda@srv02` | 
-| `srv08` | `srv01` | `ronalde.omena` | `ssh ronalde.omena@srv01` |
-| `srv03` | `srv07` | `edgar.pereira` | `ssh edgar.pereira@srv04` | 
-| `srv05` | `srv06` | `luiz.torres` | `ssh luiz.torres@srv06` | 
+| `srv01` | `srv08` | `administrador` | `ssh srv08` | 
+| `srv01` | `srv02` | `vinicius.aranda` | `ssh vinicius.aranda@192.168.26.114` | 
+| `srv08` | `srv01` | `ronalde.kelvin` | `ssh ronalde.kelvin@srv01.grupo8.bsi-26-1.maceio.lab` |
+| `srv03` | `srv07` | `edgar.pereira` | `ssh edgar.oliveira@srv04` | 
+| `srv05` | `srv06` | `luiz.torres` | `ssh luiz.arthur@srv06` | 
 
 Comandos para comprovar o acesso apos conectar via SSH:
 
 ```bash
 hostname -f
-whoami
+w
 exit
 ```
 
-Resultado esperado:
+#### Evidências
+<img width="696" height="631" alt="image" src="https://github.com/user-attachments/assets/900777ff-86d6-45f8-a7bd-9fd615617fb5" />
+<img width="665" height="715" alt="image" src="https://github.com/user-attachments/assets/28f127bb-88aa-470b-be1f-a223b0c8e1e3" />
+<img width="688" height="674" alt="image" src="https://github.com/user-attachments/assets/297c899b-5cd2-45d3-a2b9-2d837eb7fb1b" />
+<img width="664" height="797" alt="image" src="https://github.com/user-attachments/assets/f170b8ea-8fda-40bf-a080-a65ef88b0a8c" />
+<img width="665" height="807" alt="image" src="https://github.com/user-attachments/assets/3fd249a8-05ff-43fa-8ac0-a1a173ddab53" />
 
-```text
-srvXX.grupo8.bsi-26-1.maceio.lab
-usuario_utilizado_no_ssh
-```
+
+<img width="803" height="808" alt="image" src="https://github.com/user-attachments/assets/c3b64f0e-9d5b-4987-a2cb-e798915b1acd" />
+
+
 
 ## Checklist de atendimento aos requisitos
 
